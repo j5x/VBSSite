@@ -21,7 +21,7 @@
 }
 .nav a{
     float: left;
-    color: rgb(8, 202, 8);
+    color: green;
     text-align: center;
     padding: 1% 1%;
     text-decoration: none;
@@ -38,6 +38,44 @@
 .top-content{
     background-image: url(img/render1.png);
     background-size:cover;
-    height: 90vh;
+    height: 95vh;
+    filter: blur(2px);
+}
+
+
+#projects>h2 {
+    text-align: center;
+    background-color: #333;
+    color:green ;
+    padding: 15px;
+}
+.projects-inner {
+    height: 95vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 3rem;
+    background-color: #333;
+}
+.proj-container {
+    align-items: center;
+   
+}
+
+.proj-container>.title {
+    margin-bottom: 0.7rem;
+    color: green;
+    font-size: 130%;
+    
+}
+.proj-container img{
+    border-radius: 20%;
+}
+
+.projects-inner .proj-container {
+    margin-top: 5vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    
 }
 
