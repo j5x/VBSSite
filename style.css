@@ -40,12 +40,30 @@
 }
 
 .top-content {
-    background-image: url(img/render1.png);
+    /*background-image: url(img/render1.png);*/
     background-size: cover;
     height: 95vh;
-    filter: blur(2px);
+    /*filter: blur(2px);*/
     text-align: center;
 }
+
+.slider-container {
+    height: 95vh;
+    overflow: hidden;
+  }
+  
+  /* Zet display op iets om fotoslider te laten zien*/
+  .slider {
+    display: inline-block;
+    /*transition: transform 0.5s ease;*/
+  }
+  
+  .slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
 
 .projects{
     width: 100%;
