@@ -40,31 +40,41 @@
 }
 
 .top-content {
-    /*background-image: url(img/render1.png);*/
+    position: relative;
+    background-image: url(img/render1.png);
     background-size: cover;
     height: 95vh;
     /*filter: blur(2px);*/
     text-align: center;
-}
-
-.slider-container {
-    height: 95vh;
     overflow: hidden;
   }
   
-  /* Zet display op iets om fotoslider te laten zien*/
-  .slider {
-    display: inline-block;
-    /*transition: transform 0.5s ease;*/
-  }
-  
-  .slider img {
-    width: 100%;
+  .slideshow-container {
     height: 100%;
-    object-fit: cover;
+    display: flex;
+    animation: slideAnimation 15s infinite;
   }
   
-
+  .mySlides {
+    width: 100%;
+    flex-shrink: 0;
+  }
+  
+  @keyframes slideAnimation {
+    0% {
+      transform: translateX(0);
+    }
+    33.33% {
+      transform: translateX(-100%);
+    }
+    66.66% {
+      transform: translateX(-200%);
+    }
+    100% {
+      transform: translateX(-300%);
+    }
+  }
+  
 .projects{
     width: 100%;
     background-color: #333;
@@ -145,6 +155,22 @@
     border: 1px solid #888;
     width: 80%;
     font-size: 20px;
+}
+
+.modal-title{
+    color: white;
+    text-align: center;
+}
+
+.modal-subtitle{
+    color: white;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.modal-text{
+    font-size: 16px;
+    color: white;
 }
 
 .close {
