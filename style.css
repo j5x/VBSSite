@@ -63,7 +63,7 @@
     display: grid;
     justify-content: space-evenly;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .projects-inner {
