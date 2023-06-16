@@ -10,7 +10,7 @@ body {
 
 .nav {
     overflow: hidden;
-    background-color: #333;
+    background-color: #2f4470;
     height: 5vh;
     display: flex;
     align-items: center;
@@ -27,7 +27,7 @@ body {
 
 .nav a {
     float: left;
-    color: #739e52;
+    color: white;
     text-align: center;
     padding: 1% 1%;
     text-decoration: none;
@@ -242,8 +242,8 @@ body {
 
 .footer {
     padding: 20px;
-    background-color: #2e2e2e;
-    color: #739e52;
+    background-color: #2f4470;
+    color: white;
 
 }
 
@@ -275,12 +275,12 @@ body {
 
 .fa-youtube {
     background-color: #262626;
-    color: #739e52;
+    color: white;
 }
 
 .fa-instagram {
-    background-color: #262626;
-    color: #739e52;
+    background-color: #47536d;
+    color: white;
 }
 
 
