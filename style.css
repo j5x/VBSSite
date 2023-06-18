@@ -11,7 +11,7 @@ body {
 
 .nav {
     overflow: hidden;
-    background-color: #2f4470;
+    background-color: #273d66;
     height: 5vh;
     display: flex;
     align-items: center;
@@ -115,7 +115,7 @@ body {
 
 .projects {
     width: 100%;
-    background-color: #2f4470;
+    background-color: #273d66;
     padding-top: 50px;
     padding-bottom: 50px;
 }
@@ -137,7 +137,7 @@ body {
     height: 50vh;
     display: flex;
     justify-content: center;
-    background-color: #2f4470;
+    background-color: #273d66;
     width: 100%;
     align-items: center;
 }
@@ -253,7 +253,7 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
-    color: #2f4470;
+    color: white;
     padding: 20px
 }
 
@@ -262,13 +262,59 @@ body {
     margin: 1rem;
 }
 
+.abtmain h2{
+    font-size: 2rem;
+    margin-bottom: 4px;
+    padding-right: 58%;
+}
+
 .abtmain p{
     display: flex;
-    margin: 1rem    ;
+    margin: 1rem;
     align-items: center;
     max-width: 70%;
     font-size: 1.5rem;
 }
+
+.abtmain .content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.abtmain .content .title{
+    flex-basis: 30%;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.abtmain .content .image {
+    flex-basis: 30%;
+}
+
+#teamSlider{
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding-bottom: 20px; /* Adjust as needed */
+
+    .slide {
+        flex-shrink: 0;
+        scroll-snap-align: start;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .team-member-image {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin: 0 auto 10px;
+    }
+}
+
 #abtslideshow {
     text-align: center;
     overflow: hidden;
@@ -319,15 +365,14 @@ body {
     70% {margin-left: -1456px;}
     80% {margin-left: -2184px;}
     90% {margin-left: -2184px;}
-  }
+}
 
-  .footer {
+.footer {
     padding: 20px;
     margin-top: 0px;
-    background-color: #2f4470;
+    background-color: #273d66;
     color: white;
     width: 100%;
-
 }
 
 .mySocials {
@@ -357,12 +402,12 @@ body {
 }
 
 .fa-youtube {
-    background-color: #262626;
+    background-color: #647ca3;
     color: white;
 }
 
 .fa-instagram {
-    background-color: #47536d;
+    background-color: #647ca3;
     color: white;
 }
   
