@@ -115,14 +115,14 @@ body {
 
 .projects {
     width: 100%;
-    background-color: #333;
+    background-color: #2f4470;
     padding-top: 50px;
     padding-bottom: 50px;
 }
 
 .projects>h2 {
     text-align: center;
-    color: #2f4470;
+    color: white;
     padding: 15px;
 }
 
@@ -137,7 +137,7 @@ body {
     height: 50vh;
     display: flex;
     justify-content: center;
-    background-color: #333;
+    background-color: #2f4470;
     width: 100%;
     align-items: center;
 }
@@ -150,7 +150,7 @@ body {
 
 .proj-container>.title {
     margin-bottom: 0.7rem;
-    color: #2f4470;
+    color: white;
     font-size: 130%;
 
 }
@@ -322,8 +322,8 @@ body {
   }
 
   .footer {
-    padding-top: 20px;
-    margin-top: 50px;
+    padding: 20px;
+    margin-top: 0px;
     background-color: #2f4470;
     color: white;
     width: 100%;
