@@ -2,6 +2,63 @@
 <html lang="en">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+    var slideWidth = $('.abtslide').width(); // Get the width of each slide
+    var slideCount = $('.abtslide').length; // Get the total number of slides
+    var slidesToShow = 3; // Number of slides to show at once
+    var currentSlide = 0; // Variable to keep track of the current slide
+
+    // Function to move to the next slide
+    function nextSlide() {
+      currentSlide++; // Move to the next slide
+
+      if (currentSlide === Math.ceil(slideCount / slidesToShow)) {
+        // If the last group of slides is reached, reset the position to the beginning
+        $('.abtslide-wrapper').css('marginLeft', 0);
+        currentSlide = 0; // Reset the current slide to the beginning
+      }
+
+      moveSlides();
+    }
+
+    // Function to move to the previous slide
+    function prevSlide() {
+      currentSlide--; // Move to the previous slide
+
+      if (currentSlide === -1) {
+        // If the first slide is reached, move to the last group of slides
+        var lastGroup = Math.ceil(slideCount / slidesToShow) - 1;
+        $('.abtslide-wrapper').css('marginLeft', -(lastGroup * slidesToShow * slideWidth));
+        currentSlide = lastGroup; // Set the current slide to the last group
+      }
+
+      moveSlides();
+    }
+
+    // Function to animate the slide wrapper and move to the current slide
+    function moveSlides() {
+      var distance = (currentSlide * slidesToShow * slideWidth * -1);
+      $('.abtslide-wrapper').animate({ marginLeft: distance }, "slow");
+    }
+
+    // Arrow key navigation
+    $(document).keydown(function(e) {
+      if (e.keyCode === 37) {
+        // Left arrow key
+        prevSlide();
+      } else if (e.keyCode === 39) {
+        // Right arrow key
+        nextSlide();
+      }
+    });
+
+    // Automatic slideshow
+    setInterval(nextSlide, 5000);
+  });
+</script>
 
 <head>
     <meta charset="UTF-8">
@@ -25,6 +82,7 @@
                 <h1>
                     Veldboom Studios
                 </h1>
+                <br></br>
                 <h2 class="abtsub">Our Journey</h2> <!--Hiernaast Fade in overlay van W3Schools met foto van shaq-->
                 <p>
                     Veldboom Studios -
@@ -49,12 +107,12 @@
                     in
                     3D
                     design, 3D printing, gamification, and web 3.0 solutions.<br>
-                    <br>
+                    <br></br>
                 </p>
 
-                <h1>
+                <h2 id="OT">
                     Our Team
-                </h1>
+                </h2>
                 <p>
                     At Veldboom Studios, we are more than a team; we're a family of creative innovators and
                     technologists.
@@ -63,26 +121,29 @@
                     Together,
                     we work to push the limits of what's possible, bringing our collective vision to life.
                 </p>
-
+                <br>
                 <!--Team member slider-->
                 <div id="teamSlider">
                     <div class="slide">
                       <img src="img/blank.png" alt="Team Member 1" class="team-member-image">
                       <h3>Naam</h3>
-                      <p>Functie</p>
+                      <p class="function">Functie</p>
                     </div>
                     <div class="slide">
                       <img src="img/blank.png" alt="Team Member 2" class="team-member-image">
                       <h3>Naam</h3>
-                      <p>Functie</p>
+                      <p class="function">Functie</p>
                     </div>
-                    <!-- Add more slides for other team members -->
+                    <div class="slide">
+                        <img src="img/blank.png" alt="Team Member 3" class="team-member-image">
+                        <h3>Naam</h3>
+                        <p class="function">Functie</p>
+                    </div>
                 </div>
-                  
-
-                <h1>
+                </br>
+                <h3 id="OM">
                     Our Mission
-                </h1>
+                </h3>
                 <p>
                     Our mission is to innovate and create, using the latest production methods and our cultural
                     awareness to
@@ -91,11 +152,10 @@
                     build a
                     cultural and technological ecosystem that fosters creativity, diversity, and collaboration.
                 </p>
-
-
-                <h1>
+                <br></br>
+                <h2 id="JOJ">
                     Join our Journey
-                </h1>
+                </h2>
                 <p>
                     We invite you to explore our projects, learn more about our team, and see the impact of our work. If
                     you
@@ -108,25 +168,43 @@
                 </p>
             </div>
 
-            <div id="abtslideshow"> <!--Bedrijven waarmee we al gewerkt hebben.-->
-                <div class="abtslide-wrapper">
+            <div id="abtslideshow">
+                <div class="abtslide-viewport">
+                  <div class="abtslide-wrapper">
                     <div class="abtslide">
-                        <h1 class="abtslide-number">1</h1>
+                      <h1 class="abtslide-number">1</h1>
                     </div>
                     <div class="abtslide">
-                        <h1 class="abtslide-number">2</h1>
+                      <h1 class="abtslide-number">2</h1>
                     </div>
                     <div class="abtslide">
-                        <h1 class="abtslide-number">3</h1>
+                      <h1 class="abtslide-number">3</h1>
                     </div>
                     <div class="abtslide">
-                        <h1 class="abtslide-number">4</h1>
+                      <h1 class="abtslide-number">4</h1>
                     </div>
                     <div class="abtslide">
-                        <h1 class="abtslide-number">5</h1>
+                      <h1 class="abtslide-number">5</h1>
                     </div>
+                    <div class="abtslide">
+                        <h1 class="abtslide-number">6</h1>
+                    </div>
+                    <div class="abtslide">
+                        <h1 class="abtslide-number">7</h1>
+                    </div>
+                    <div class="abtslide">
+                        <h1 class="abtslide-number">8</h1>
+                    </div>
+                    <div class="abtslide">
+                        <h1 class="abtslide-number">9</h1>
+                    </div>
+                    <div class="abtslide">
+                        <h1 class="abtslide-number">10</h1>
+                    </div>
+                  </div>
                 </div>
             </div>
+              
 
             <footer class="footer" id="contact">
                 <h1>Contact</h1>
