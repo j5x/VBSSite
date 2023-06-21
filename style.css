@@ -386,6 +386,18 @@ body {
     80% { transform: translateX(-100%); }
     90% { transform: translateX(-100%); }
 }
+
+.abtslide-text {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .abtslide-text h2 {
+    font-size: 20px;
+    color: white;
+    margin-bottom: 20px;
+}
+  
   
 .footer {
     padding: 20px;
