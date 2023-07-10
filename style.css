@@ -27,6 +27,7 @@ body {
     align-items: center;
     justify-content: space-around;
     gap: 150px;
+    flex-grow: 1;
 }
 
 .nav a {
@@ -46,6 +47,18 @@ body {
     transition: 0.3s;
 
 }
+
+.logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    height: 40px;
+    width: auto; /* Adjust the width to match the resized logo */
+    padding: 2px;
+}
+  
 
 .top-content {
     position: relative;
