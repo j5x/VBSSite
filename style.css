@@ -12,7 +12,7 @@ body {
 .nav {
     overflow: hidden;
     background-color: #384255;
-    height: 5vh;
+    height: 7vh;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -52,11 +52,16 @@ body {
     display: flex;
     align-items: center;
   }
+
+  .logo a {
+    display: inline-block;
+    cursor: pointer;
+  }
   
   .logo img {
-    height: 40px;
+    height: 65px;
     width: auto; /* Adjust the width to match the resized logo */
-    padding: 2px;
+    padding: 10px;
 }
   
 
@@ -129,27 +134,33 @@ body {
 }
 
 
-.projects {
+.box-wrapholder {
     width: 100%;
     background-color: #273d66;
     padding-top: 50px;
     padding-bottom: 50px;
 }
+.box-wrapholder>h1{
+    text-align: center;
+    color: white;
+    padding: 15px;
+    font-size: 2.5rem;
+}
 
-.projects>h2 {
+.box-wrapholder>h2 {
     text-align: center;
     color: white;
     padding: 15px;
 }
 
-.project-wrapper {
+.box-wrapper {
     display: grid;
     justify-content: space-evenly;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
 }
 
-.projects-inner {
+.box-inner {
     height: 50vh;
     display: flex;
     justify-content: center;
@@ -158,37 +169,40 @@ body {
     align-items: center;
 }
 
-.proj-container {
+.box-wrap-container {
     align-items: center;
 
 }
 
 
-.proj-container>.title {
+.box-wrap-container>.title {
     margin-bottom: 0.7rem;
     color: white;
     font-size: 130%;
 
 }
 
-.proj-container img {
+.box-wrap-container img {
     border-radius: 20%;
     transform: scale(.9);
     transition: 0.3s;
 }
 
-.proj-container img:hover {
+.box-wrap-container img:hover {
     transform: scale(1.1);
     transition: 0.3s;
 }
 
 
-.projects-inner .proj-container {
+.box-inner .box-wrap-container {
     margin-top: 5vh;
     display: flex;
     flex-flow: column;
     justify-content: center;
 
+}
+#services{
+    background-color: black;
 }
 
 .modal {
@@ -211,8 +225,9 @@ body {
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
+    width: 85%;
     font-size: 20px;
+    height: 90%;
 }
 
 .modal-title {
@@ -256,6 +271,7 @@ body {
     height: 100%;
     border-radius: 20%;
 }
+
 
 
 .abtus{
